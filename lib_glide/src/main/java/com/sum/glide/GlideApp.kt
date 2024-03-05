@@ -65,7 +65,7 @@ fun ImageView.loadFile(file: File?) {
  * 设置图片，不开启缓存
  * @param url
  */
-fun ImageView.setUrlNoCache(url: String?) {
+fun ImageView.setUrlWithoutCache(url: String?) {
     if (ActivityManager.isActivityDestroy(context)) return
     Glide.with(context).load(url)
             .placeholder(R.mipmap.default_img)
