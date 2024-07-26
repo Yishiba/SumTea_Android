@@ -44,7 +44,8 @@ class MainActivity : BaseDataBindActivity<ActivityMainBinding>() {
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment
         //2.自定义FragmentNavigator，mobile_navigation.xml文件中的fragment标识改为SumFragmentNavigator的sumFragment
-        val fragmentNavigator = SumFragmentNavigator(this, navHostFragment.childFragmentManager, navHostFragment.id)
+        val fragmentNavigator =
+            SumFragmentNavigator(this, navHostFragment.childFragmentManager, navHostFragment.id)
         //3.注册到Navigator里面，这样才找得到
         navController.navigatorProvider.addNavigator(fragmentNavigator)
         //4.设置Graph，需要将activity_main.xml文件中的app:navGraph="@navigation/mobile_navigation"移除
